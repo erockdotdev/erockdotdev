@@ -1,0 +1,8 @@
+.myspace-card {
+  width: 450px;
+  min-height: 50px;
+  border: solid blue 1px;
+  text-align: left;
+  padding: 10px 15px;
+  margin: 10px 15px;
+}
