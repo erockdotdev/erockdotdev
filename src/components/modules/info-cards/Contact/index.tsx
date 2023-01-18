@@ -1,6 +1,7 @@
-import MySpaceCard from "@/components/layouts/MySpaceCard";
 import { writeToClipboard } from "@/lib/window-utils";
 import { useState } from "react";
+
+import styles from "./styles.module.scss";
 
 export default function Contact({ contact }: any) {
   const [copyEmailLabel, setCopyEmailLabel] = useState("Copy Email");
@@ -10,7 +11,7 @@ export default function Contact({ contact }: any) {
     setCopyEmailLabel("Email Copied");
   };
   return (
-    <section style={{ display: "flex", justifyContent: "space-between" }}>
+    <section className={styles.contact}>
       <span>
         email: <a href={`mailto:${contact.email}`}>{contact.email}</a>
       </span>

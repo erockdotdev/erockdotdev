@@ -1,11 +1,12 @@
 import Image from "next/image";
+import styles from "./styles.module.scss";
 
 export default function Associations({ associations }: any) {
   return (
-    <>
+    <section>
       {associations.institutions.map((association: any, index: any) => {
         return (
-          <p key={index}>
+          <span key={index} className={styles.association}>
             <Image
               src={association.icon.src}
               alt={association.icon.src}
@@ -13,9 +14,9 @@ export default function Associations({ associations }: any) {
               height={48}
             />
             &nbsp; {association.name}
-          </p>
+          </span>
         );
       })}
-    </>
+    </section>
   );
 }

@@ -1,0 +1,13 @@
+.role {
+    &:not(:last-child){
+        margin-bottom: 25px;
+    }
+}
+.company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.company-info{
+    margin-left: 15px
+}

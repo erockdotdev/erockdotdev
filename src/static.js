@@ -1,3 +1,7 @@
+/**
+ * @todos: reorganize static images
+ */
+
 const overview = {
   type: "overview",
   title: "erockdotdev",
@@ -6,11 +10,13 @@ const overview = {
     alt: "avatar",
   },
   name: "Eric Sanchez",
-  subtitle: "Lorem Ipsum",
+  subtitle:
+    '"Are you telling me you built a time machine... out of a DeLorean"',
   location: "Asheville, NC",
   nav: [
     { label: "Experience", url: "#experience" },
     { label: "Contributions", url: "#contributions" },
+    { label: "Projects", url: "#projects" },
   ],
 };
 
@@ -42,6 +48,10 @@ const social = {
     },
     {
       name: "github",
+      link: {
+        label: "erockdotdev",
+        url: "https://github.com/erockdotdev",
+      },
       icon: {
         src: "/icons/social/gh.png",
         alt: "LinkedInlogo",
@@ -115,7 +125,7 @@ const associations = {
 const experience = {
   type: "experience",
   title: "Experience",
-  companies: [
+  roles: [
     {
       company: {
         name: "Even Financial",
@@ -191,11 +201,11 @@ const experience = {
 const contributions = {
   type: "contributions",
   title: "Contributions",
-  contributions: [
+  projects: [
     {
       title: "DeLorean Next Generation",
       description: "Social Media Manager",
-      year: "2022",
+      year: "2022-Current",
       client: {
         name: "Kat DeLorean",
         website: "https:dngmotors.com",
@@ -211,7 +221,7 @@ const contributions = {
     {
       title: "DeLorean Legacy Project",
       description: "Social Media Contributor",
-      year: "2022",
+      year: "2022-Current",
       client: {
         name: "Kat DeLorean",
         website: "https://deloreanlegacy.com",
@@ -221,24 +231,9 @@ const contributions = {
         },
       },
     },
+
     {
-      title: "Modern Occult Apparel",
-      description: "Product Designer",
-      year: "2022",
-      client: {
-        name: "",
-        website: "https://modernoccultapparel.com",
-        icon: {
-          src: "/icons/projects/moa-logo.png",
-          alt: "Modern Occult Apparel Logo",
-        },
-      },
-      link: {
-        url: "https://link/to/content",
-      },
-    },
-    {
-      title: "Infinite Shapes | Traveling Colors",
+      title: "Infinite Shapes Traveling Colors",
       description: "Book Layout Design",
       year: "2020",
       client: {
@@ -272,6 +267,44 @@ const contributions = {
   ],
 };
 
+const projects = {
+  type: "projects",
+  title: "Projects",
+  projects: [
+    {
+      title: "Imbueme",
+      description: "Co-founder",
+      year: "2022",
+      client: {
+        name: "",
+        website: "https://modernoccultapparel.com",
+        icon: {
+          src: "/icons/projects/imbueme-logo.png",
+          alt: "Modern Occult Apparel Logo",
+        },
+      },
+      link: {
+        url: "https://link/to/content",
+      },
+    },
+    {
+      title: "Modern Occult Apparel",
+      description: "Product Designer",
+      year: "2022",
+      client: {
+        name: "",
+        website: "https://modernoccultapparel.com",
+        icon: {
+          src: "/icons/projects/moa-logo.png",
+          alt: "Modern Occult Apparel Logo",
+        },
+      },
+      link: {
+        url: "https://link/to/content",
+      },
+    },
+  ],
+};
 export const data = {
   overview,
   social,
@@ -281,4 +314,5 @@ export const data = {
   associations,
   experience,
   contributions,
+  projects,
 };

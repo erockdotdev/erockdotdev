@@ -40,3 +40,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ----
 
 icons: https://www.iconfinder.com/
+structured data: https://dashjoin.medium.com/json-schema-schema-org-json-ld-whats-the-difference-e30d7315686a
+
+js seo: https://www.youtube.com/watch?v=LXF8bM4g-J4&list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9

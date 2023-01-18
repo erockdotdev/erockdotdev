@@ -1,13 +1,11 @@
-import MySpaceCard from "@/components/layouts/MySpaceCard";
 import Image from "next/image";
-import React from "react";
-
+import styles from "./styles.module.scss";
 export default function Education({ education }: any) {
   return (
-    <>
+    <section>
       {education.institutions.map((school: any, index: any) => {
         return (
-          <p key={index}>
+          <span key={`school-${index}`} className={styles.school}>
             <Image
               src={school.icon.src}
               alt={school.icon.src}
@@ -15,9 +13,9 @@ export default function Education({ education }: any) {
               height={48}
             />
             &nbsp; {school.name} • {school.year}
-          </p>
+          </span>
         );
       })}
-    </>
+    </section>
   );
 }

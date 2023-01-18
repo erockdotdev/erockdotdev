@@ -1,0 +1,22 @@
+.contribution {
+    &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.client-info {
+    margin-left: 15px
+}
+
+.role {
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+

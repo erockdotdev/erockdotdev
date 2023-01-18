@@ -1,0 +1,13 @@
+.social {    
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    &:not(:last-child){
+        margin-right: 10px
+    }
+}
+
+.social-icon {
+    margin-right: 8px;
+}

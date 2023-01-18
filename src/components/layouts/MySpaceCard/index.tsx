@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "@/styles/myspace-card.module.css";
+import styles from "./styles.module.scss";
 
 interface IMySpaceCard {
   title?: string;
