@@ -8,10 +8,12 @@ import Experience from "./Experience";
 import Overview from "./Overview";
 import Social from "./Social";
 import Projects from "./Projects";
+import MediaPlayer from "./MediaPlayer";
 
 const marshallInfoCards = (props: any) => {
   const { id, data } = props;
   let infoCard = null;
+
   //@todo refactor other cards to use {...data} instead of named props
   switch (data.type) {
     case "overview":
@@ -40,6 +42,10 @@ const marshallInfoCards = (props: any) => {
       break;
     case "projects":
       infoCard = <Projects {...props} />;
+      break;
+    case "media-player":
+      console.log("marshall", data.playlist.tracks);
+      infoCard = <MediaPlayer {...props} />;
       break;
     default:
       infoCard = <div />; // how to handle no op?

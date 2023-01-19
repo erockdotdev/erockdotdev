@@ -306,6 +306,31 @@ const projects = {
     },
   ],
 };
+
+const mediaPlayer = {
+  type: "media-player",
+  title: "Media Player",
+  playlist: {
+    title: "Dope Tracks",
+    tracks: [
+      {
+        artist: "Mindless Self Indulgence",
+        title: "Bring the Pain",
+        src: "/audio/bring-the-pain.mp3",
+      },
+      {
+        artist: "Nirvana",
+        title: "Do Re Mi (Band Mockup)",
+        src: "/audio/do-re-mi.mp3",
+      },
+      {
+        artist: "The Jins",
+        title: "Jack Skellington",
+        src: "/audio/jack-skellington.mp3",
+      },
+    ],
+  },
+};
 export const data = {
   overview,
   social,
@@ -316,4 +341,5 @@ export const data = {
   experience,
   contributions,
   projects,
+  mediaPlayer,
 };

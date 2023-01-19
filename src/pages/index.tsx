@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { GetServerSideProps } from "next";
 import styles from "@/styles/Home.module.css";
-import MySpaceCard from "@/components/layouts/MySpaceCard";
 import InfoCard from "@/components/modules/info-cards";
 
 import { data } from "../static";
@@ -29,6 +28,7 @@ export default function Home(props: any) {
     experience,
     contributions,
     projects,
+    mediaPlayer,
   } = props;
 
   const isLoaded = useIsLoaded();
@@ -38,7 +38,7 @@ export default function Home(props: any) {
     type: "desktop",
     sections: [
       [overview, social, contact, about, education, associations],
-      [/*mediaPlayer, posts*/ experience, contributions, projects],
+      [mediaPlayer, /*posts*/ experience, contributions, projects],
     ],
   };
 
@@ -46,7 +46,7 @@ export default function Home(props: any) {
     type: "mobile",
     sections: [
       overview,
-      /*mediaPlayer*/
+      mediaPlayer,
       social,
       contact,
       /*posts,*/
@@ -144,6 +144,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       experience: data.experience,
       contributions: data.contributions,
       projects: data.projects,
+      mediaPlayer: data.mediaPlayer,
     },
   };
 };
