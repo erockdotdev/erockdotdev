@@ -274,14 +274,14 @@ const projects = {
   projects: [
     {
       title: "Imbueme",
-      description: "Co-founder",
+      description: "Developer, Content Creator",
       year: "2022",
       client: {
         name: "",
         website: "https://modernoccultapparel.com",
         icon: {
           src: "/icons/projects/imbueme-logo.png",
-          alt: "Modern Occult Apparel Logo",
+          alt: "imbueme Logo",
         },
       },
       link: {
@@ -290,7 +290,7 @@ const projects = {
     },
     {
       title: "Modern Occult Apparel",
-      description: "Product Designer",
+      description: "Web and Product Designer",
       year: "2022",
       client: {
         name: "",
@@ -314,9 +314,9 @@ const mediaPlayer = {
     title: "Dope Tracks",
     tracks: [
       {
-        artist: "Mindless Self Indulgence",
-        title: "Bring the Pain",
-        src: "/audio/bring-the-pain.mp3",
+        artist: "The Jins",
+        title: "Jack Skellington",
+        src: "/audio/jack-skellington.mp3",
       },
       {
         artist: "Nirvana",
@@ -324,9 +324,9 @@ const mediaPlayer = {
         src: "/audio/do-re-mi.mp3",
       },
       {
-        artist: "The Jins",
-        title: "Jack Skellington",
-        src: "/audio/jack-skellington.mp3",
+        artist: "Mindless Self Indulgence",
+        title: "Bring the Pain",
+        src: "/audio/bring-the-pain.mp3",
       },
     ],
   },

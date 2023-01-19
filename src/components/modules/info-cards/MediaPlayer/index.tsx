@@ -13,9 +13,9 @@ export default function MediaPlayer(props: any) {
   // let audio = document.getElementById("audio");
 
   const handleTrackClick = (track: any) => {
-    console.log("click");
     setSelectedTrack(track);
-    audioRef?.current?.load();
+    const audioCurrent = audioRef?.current as any;
+    audioCurrent.load();
   };
 
   const renderPlaylist = (playlist: any) => {
