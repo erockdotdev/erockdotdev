@@ -6,6 +6,10 @@ import MySpaceCard from "@/components/layouts/MySpaceCard";
 import InfoCard from "@/components/modules/info-cards";
 
 import { data } from "../static";
+import MySpacePage from "@/components/layouts/MySpacePage";
+import useMediaQuery from "@/components/hooks/useMediaQuery";
+import useIsLoaded from "@/components/hooks/useIsLoaded";
+import InfoCardList from "@/components/layouts/MySpaceCardList";
 
 /**
  * Need 'experience' query param to hide and show cards, change about hide media player and comments
@@ -27,6 +31,60 @@ export default function Home(props: any) {
     projects,
   } = props;
 
+  const isLoaded = useIsLoaded();
+  const isDesktop = useMediaQuery("(min-width: 960px)", isLoaded);
+
+  const sectionsDesktop = {
+    type: "desktop",
+    sections: [
+      [overview, social, contact, about, education, associations],
+      [/*mediaPlayer, posts*/ experience, contributions, projects],
+    ],
+  };
+
+  const sectionsMobile = {
+    type: "mobile",
+    sections: [
+      overview,
+      /*mediaPlayer*/
+      social,
+      contact,
+      /*posts,*/
+      about,
+      experience,
+      contributions,
+      projects,
+      education,
+      associations,
+    ],
+  };
+
+  const sections = isDesktop ? sectionsDesktop : sectionsMobile;
+
+  console.log("sections", sections);
+
+  const createSectionList = (sections: any) => {
+    console.log("@@sections==>", sections);
+    return (
+      <InfoCardList>
+        {sections.map((section: any, index: number) => (
+          // need to refactor to handle ids
+          <InfoCard key={`section-${index}`} data={section} />
+        ))}
+      </InfoCardList>
+    );
+  };
+
+  const renderSections = (sectionLists: any) => {
+    if (sections.type === "desktop" && isDesktop) {
+      return sectionLists.sections.map((infoCardsData: any[]) => {
+        return createSectionList(infoCardsData);
+      });
+    } else if (sections.type === "mobile") {
+      return createSectionList(sectionLists.sections);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -35,31 +93,36 @@ export default function Home(props: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.column}>
-          <InfoCard data={overview} />
-          <InfoCard data={social} />
-          <InfoCard data={contact} />
-          <InfoCard data={about} />
-          <InfoCard data={education} />
-          <InfoCard data={associations} />
-        </div>
-        <div className={styles.column}>
-          <MySpaceCard title="MediaPlayer"></MySpaceCard>
+      <MySpacePage>
+        <main className={styles.main}>
+          {renderSections(sections)}
+          {/* <InfoCardList>
+            <InfoCard data={overview} />
+            <InfoCard data={social} />
+            <InfoCard data={contact} />
+            <InfoCard data={about} />
+            <InfoCard data={education} />
+            <InfoCard data={associations} />
+          </InfoCardList>
+          <InfoCardList> */}
+          {/* <MySpaceCard title="MediaPlayer">
+              <div id="winamp-container"></div>
+            </MySpaceCard> */}
           {/* <MySpaceCard title="Events"></MySpaceCard> */}
-          <MySpaceCard title="Posts">
-            <p>Pined</p>
-            <p>Recent</p>
-            <p>See More</p>
-          </MySpaceCard>
-          <InfoCard id="experience" data={experience} />
-          <InfoCard id="contributions" data={contributions} />
-          <InfoCard id="projects" data={projects} />
-          <MySpaceCard title="Friends"></MySpaceCard>
-          <MySpaceCard title="Comments"></MySpaceCard>
-        </div>
-      </main>
-      <footer>PUNCH THE MONKEY</footer>
+          {/* <MySpaceCard title="Posts">
+              <p>Pined</p>
+              <p>Recent</p>
+              <p>See More</p>
+            </MySpaceCard> */}
+          {/* <InfoCard id="experience" data={experience} />
+            <InfoCard id="contributions" data={contributions} />
+            <InfoCard id="projects" data={projects} /> */}
+          {/* <MySpaceCard title="Friends"></MySpaceCard>
+          <MySpaceCard title="Comments"></MySpaceCard> */}
+          {/* </InfoCardList> */}
+        </main>
+        <footer>PUNCH THE MONKEY</footer>
+      </MySpacePage>
     </>
   );
 }
