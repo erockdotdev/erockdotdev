@@ -17,6 +17,7 @@ const overview = {
     { label: "Experience", url: "#experience" },
     { label: "Contributions", url: "#contributions" },
     { label: "Projects", url: "#projects" },
+    // { label: "Appearances", url: "#appearances" },
   ],
 };
 
