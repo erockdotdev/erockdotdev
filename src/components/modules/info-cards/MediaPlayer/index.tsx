@@ -7,7 +7,7 @@ export default function MediaPlayer(props: any) {
     data: { playlist },
   } = props;
 
-  const audioRef = useRef();
+  const audioRef = useRef(null);
 
   const [selectedTrack, setSelectedTrack] = useState(playlist.tracks[0]);
   // let audio = document.getElementById("audio");
