@@ -205,7 +205,7 @@ const contributions = {
   projects: [
     {
       title: "DeLorean Next Generation",
-      description: "Social Media Manager",
+      description: "Social Media Contributor, Email Support",
       year: "2022-Current",
       client: {
         name: "Kat DeLorean",
@@ -221,7 +221,7 @@ const contributions = {
     },
     {
       title: "DeLorean Legacy Project",
-      description: "Social Media Contributor",
+      description: "Edit historical videos for modern platforms",
       year: "2022-Current",
       client: {
         name: "Kat DeLorean",
