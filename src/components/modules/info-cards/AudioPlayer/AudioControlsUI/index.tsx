@@ -2,14 +2,14 @@ import styles from "./styles.module.scss";
 
 interface IAudioControls {
   isPlaying: boolean;
-  onPlayPauseClick: any;
+  togglePausePlay: any;
   onPrevClick: any;
   onNextClick: any;
 }
 
 const AudioControls = ({
   isPlaying,
-  onPlayPauseClick,
+  togglePausePlay,
   onPrevClick,
   onNextClick,
 }: IAudioControls) => {
@@ -20,9 +20,9 @@ const AudioControls = ({
           type="button"
           className="pause"
           aria-label="Pause"
-          onClick={() => onPlayPauseClick(false)}
+          onClick={() => togglePausePlay(false)}
         >
-          Play
+          Pause
         </button>
       );
     } else {
@@ -31,7 +31,7 @@ const AudioControls = ({
           type="button"
           className="play"
           aria-label="Play"
-          onClick={() => onPlayPauseClick(true)}
+          onClick={() => togglePausePlay(true)}
         >
           Play
         </button>
@@ -54,7 +54,7 @@ const AudioControls = ({
         type="button"
         className="next"
         aria-label="Next"
-        onClick={onPrevClick}
+        onClick={onNextClick}
       >
         Next
       </button>
