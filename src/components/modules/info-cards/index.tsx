@@ -9,7 +9,11 @@ import Overview from "./Overview";
 import Social from "./Social";
 import Projects from "./Projects";
 import MediaPlayer from "./MediaPlayer";
-import AudioPlayer from "./AudioPlayer";
+const AudioPlayer = dynamic(() => import("./AudioPlayer"), {
+  // loading: () => "Loading...",
+  ssr: false,
+});
+import dynamic from "next/dynamic";
 
 const marshallInfoCards = (props: any) => {
   const { id, data } = props;
