@@ -29,6 +29,7 @@ export default function Home(props: any) {
     contributions,
     projects,
     mediaPlayer,
+    audioPlayer,
   } = props;
 
   const isLoaded = useIsLoaded();
@@ -38,7 +39,7 @@ export default function Home(props: any) {
     type: "desktop",
     sections: [
       [overview, social, contact, about, education, associations],
-      [mediaPlayer, /*posts*/ experience, contributions, projects],
+      [audioPlayer, /*posts*/ experience, contributions, projects],
     ],
   };
 
@@ -46,7 +47,7 @@ export default function Home(props: any) {
     type: "mobile",
     sections: [
       overview,
-      mediaPlayer,
+      audioPlayer,
       social,
       contact,
       /*posts,*/
@@ -145,6 +146,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       contributions: data.contributions,
       projects: data.projects,
       mediaPlayer: data.mediaPlayer,
+      audioPlayer: data.audioPlayer,
     },
   };
 };

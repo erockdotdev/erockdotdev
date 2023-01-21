@@ -45,3 +45,6 @@ structured data: https://dashjoin.medium.com/json-schema-schema-org-json-ld-what
 js seo: https://www.youtube.com/watch?v=LXF8bM4g-J4&list=PLKoqnv2vTMUPOalM1zuWDP9OQl851WMM9
 
 how to ssr mobile only views
+
+- audio html audio player hooks
+https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks

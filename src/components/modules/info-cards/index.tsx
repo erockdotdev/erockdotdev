@@ -9,6 +9,7 @@ import Overview from "./Overview";
 import Social from "./Social";
 import Projects from "./Projects";
 import MediaPlayer from "./MediaPlayer";
+import AudioPlayer from "./AudioPlayer";
 
 const marshallInfoCards = (props: any) => {
   const { id, data } = props;
@@ -43,9 +44,8 @@ const marshallInfoCards = (props: any) => {
     case "projects":
       infoCard = <Projects {...props} />;
       break;
-    case "media-player":
-      console.log("marshall", data.playlist.tracks);
-      infoCard = <MediaPlayer {...props} />;
+    case "audio-player":
+      infoCard = <AudioPlayer {...props} />;
       break;
     default:
       infoCard = <div />; // how to handle no op?

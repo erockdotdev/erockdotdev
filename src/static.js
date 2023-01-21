@@ -1,3 +1,4 @@
+import { tracks } from "./components/modules/info-cards/AudioPlayer/demo-track";
 /**
  * @todos: reorganize static images
  */
@@ -307,6 +308,11 @@ const projects = {
   ],
 };
 
+const audioPlayer = {
+  type: "audio-player",
+  title: "Audio Player",
+  tracks,
+};
 const mediaPlayer = {
   type: "media-player",
   title: "Media Player",
@@ -331,6 +337,7 @@ const mediaPlayer = {
     ],
   },
 };
+
 export const data = {
   overview,
   social,
@@ -342,4 +349,5 @@ export const data = {
   contributions,
   projects,
   mediaPlayer,
+  audioPlayer,
 };
